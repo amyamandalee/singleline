@@ -26,19 +26,51 @@
 .sl-guitar-svg svg {
   fill:none;
   stroke:#ffffff;
-  stroke-width:4;
+  stroke-width:0;
   stroke-miterlimit:10;
   stroke-dasharray: 2821.455322265625;
-  animation: dash 10s linear forwards infinite;
+  animation: dash 5s linear forwards;
   width: 100%;
+  animation-delay: .5s;
+}
+
+.sl-text-svg {
+  position: absolute;
+  width: 35%;
+  margin-top: 22vh;
+}
+
+.sl-text-svg svg {
+  fill:none;
+  stroke:#ffffff;
+  stroke-width: 0;
+  stroke-miterlimit:10;
+  stroke-dasharray: 4010.2470703125;
+  animation: dash-text 9s linear forwards;
+  width: 100%;
+  animation-delay: 6s;
 }
 
 @keyframes dash {
   from {
+    stroke-width:4;
     stroke-dashoffset: 2821.455322265625;
   }
 
   to {
-    stroke-dashoffset: -2821.455322265625;
+    stroke-width:4;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash-text {
+  from {
+    stroke-width: 1.75;
+    stroke-dashoffset: 4010.2470703125;
+  }
+
+  to {
+    stroke-width: 1.75;
+    stroke-dashoffset: 0;
   }
 }
